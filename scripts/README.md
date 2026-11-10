@@ -7,12 +7,20 @@ script with `--help` for its full option list.
 ## Environment
 
 - `setup-esp-idf.sh`: clone or prepare the official ESP-IDF checkout. Defaults
-  to `~/esp/esp-idf` and ESP-IDF `v5.5.3`.
+  to `~/esp/esp-idf` and ESP-IDF `v5.5.6`.
 - `check-environment.sh`: verify ESP-IDF, required project files, and Python
   helper syntax.
 
 The shared helper code rejects PlatformIO-packaged ESP-IDF because this project
 expects the official ESP-IDF checkout and export script.
+
+For an existing ESP-IDF installation, use a separate checkout to select the
+updated SDK without changing another project's tools:
+
+```sh
+./scripts/setup-esp-idf.sh --idf-path "$HOME/esp/esp-idf-v5.5.6"
+IDF_PATH="$HOME/esp/esp-idf-v5.5.6" ./scripts/build-firmware.sh
+```
 
 ## Build And Flash
 

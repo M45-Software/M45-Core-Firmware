@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 PYTHON_BIN="${PYTHON:-python3}"
 IDF_PYTHON_BIN="${PYTHON_BIN}"
-DEFAULT_IDF_VERSION="${DEFAULT_IDF_VERSION:-v5.5.3}"
+DEFAULT_IDF_VERSION="${DEFAULT_IDF_VERSION:-v5.5.6}"
 DEFAULT_IDF_PATH="${DEFAULT_IDF_PATH:-${HOME}/esp/esp-idf}"
 
 log() {
